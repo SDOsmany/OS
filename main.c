@@ -1,4 +1,4 @@
-/*
+ /*
 Osmany Pujol
 PID: 6284064
 Program Description: A program to practice synchronization using

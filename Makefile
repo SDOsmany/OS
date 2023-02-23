@@ -1,2 +1,4 @@
+semaphores: semaphores.c
+		gcc semaphores.c -o semaphores -lpthread
 main: main.c
-		cc main.c -o main -lpthread
+		gcc main.c -o main -lpthread
