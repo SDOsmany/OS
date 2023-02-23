@@ -31,7 +31,6 @@ struct shared_data *counter;
  */
 void *increment(void *thread_num)
 {
-    /*ENTRY SECTION*/
     int thread_update = 0;
     for (;;)
     {
@@ -69,7 +68,6 @@ void *increment(void *thread_num)
  */
 void *increment_bonus(void *thread_num)
 {
-    /*ENTRY SECTION*/
     int thread_update = 0;
     int bonus = 0;
     for (;;)
@@ -120,6 +118,7 @@ int main(int argc, char *argv[])
     {
         int *thread_num = malloc(sizeof(int));
         *thread_num = i + 1;
+        /*ENTRY SECTION*/
         if (i == 0)
         {
             pthread_create(&threads[i], NULL, increment_bonus, thread_num); // create thread1
@@ -130,7 +129,6 @@ int main(int argc, char *argv[])
         }
     }
 
-    /* REMAINDER SECTION*/
 
     for (int i = 0; i < NUM_THREADS; i++)
     {
